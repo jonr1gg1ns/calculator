@@ -1,0 +1,130 @@
+
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    height: 100vh;          
+    margin: 0;              
+    font-family: Arial, sans-serif; 
+    background-color: #f0f0f0; 
+}
+
+
+.bg {
+    width: 300px;
+    height: 500px;
+    background-color: #333;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: 
+    "seven eight nine divide"
+    "four five six multiply"
+    "one two three subtract"
+    "clear zero equal add";
+    gap: 10px;
+    flex-grow: .5;
+}
+.screen {
+    background-color: #004d00;
+    color: white;
+    flex-grow: .4;
+    border-radius: 8px;
+    border: 4px solid black;
+    margin-bottom: 5%;
+}
+button {
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    height: 50px;
+    color: white;
+    background-color: #555;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+.\7 { 
+    grid-area: seven; 
+}
+button.\8 { 
+    grid-area: eight; 
+}
+button.\9 { 
+    grid-area: nine; 
+}
+button.divide { 
+    grid-area: divide; 
+    background-color: #0099ff;
+}
+button.\4 { 
+    grid-area: four;
+}
+button.\5 {
+    grid-area: five; 
+}
+button.\6 { 
+    grid-area: six; 
+}
+button.multiply { 
+    grid-area: multiply; 
+    background-color: #ffcc00; 
+}
+button.\1 { 
+    grid-area: one; 
+}
+button.\2 { 
+    grid-area: two; 
+}
+button.\3 { 
+    grid-area: three; 
+}
+button.subtract { 
+    grid-area: subtract;
+    background-color: #ff4444; 
+}
+button.clear { 
+    grid-area: clear; 
+    background-color: #ff0000;
+}
+button.\0 {
+     grid-area: zero; 
+}
+button.equal { 
+    grid-area: equal; 
+    background-color: #00cc00;
+}
+button.plus {
+     grid-area: add; 
+     background-color: #ff8c00;
+}
+
+button:hover {
+    background-color: #333;   
+}
+
+button:active {
+    background-color: #222;   
+}
+
+.bg p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00cc00;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    padding: 10px 0;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    text-align: center;
+}
